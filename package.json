@@ -2,12 +2,14 @@
   "name": "1",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "pantianyi <pantianyi@ibaixiong.com>",
+  "author": "fanwenqiang <fanwenqiang@ibaixiong.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "dev": "pm2 start build/dev-server.js",
+    "start": "pm2 start build/dev-server.js",
+    "build": "node build/build.js",
+    "stop": "pm2 stop all",
+    "server":"pm2 start server.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
